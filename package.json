@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-06-phonebook-new",
+  "name": "goit-react-hw-07-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Bohatyrenko.github.io/goit-react-hw-06-phonebook-new",
+  "homepage": "https://Bohatyrenko.github.io/goit-react-hw-07-phonebook",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.0",
     "@testing-library/jest-dom": "^5.14.1",
