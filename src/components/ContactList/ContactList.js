@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import style from '../ContactList/contactList.module.css';
 import getFilteredContacts from '../../helpers/filterContacts';
 
-const ContactList = ({ contacts, deleteContact, filter, onContactFetch }) => {
-  const contactsArr = getFilteredContacts(contacts, filter);
+const ContactList = ({ contacts, deleteContact, onContactFetch }) => {
+  const contactsArr = getFilteredContacts(contacts);
   useEffect(() => {
     onContactFetch();
   }, [onContactFetch]);
