@@ -1,4 +1,5 @@
 import { createReducer, combineReducers } from '@reduxjs/toolkit';
+import contactDB from '../../db.json';
 import {
   addContactError,
   addContactSuccess,
@@ -12,7 +13,7 @@ import {
   filterContact,
 } from './phonebook-actions';
 
-const phonebookContacts = createReducer([], {
+const phonebookContacts = createReducer(contactDB, {
   [addContactSuccess]: (state, { payload }) => [...state, payload],
   [deleteContactSuccess]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
