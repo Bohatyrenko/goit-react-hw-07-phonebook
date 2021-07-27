@@ -1,4 +1,33 @@
+.btn {
+  background-color: red;
+  box-shadow: 0 5px 0 darkred;
+  border-radius: 10px;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #ce0606;
+  cursor: pointer;
+}
+
+.btn:active {
+  box-shadow: none;
+  top: 5px;
+}
+
 .app {
   display: grid;
   text-align: center;
 }
+
+.link {
+  display: inline-flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin: 20px;
+}
+

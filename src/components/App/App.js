@@ -1,7 +1,7 @@
 import React from 'react'; //при закоментированом варианте нужно сюда дописать { Component }
 // import { useState, useEffect } from 'react';
 import { Route, Link } from 'react-router-dom';
-import style from './app.module.css';
+import s from './app.module.css';
 
 //Components
 // import ContactForm from '../ContactForm/ContactForm';
@@ -46,21 +46,33 @@ function App() {
   // };
 
   return (
-    <div className={style.app}>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/phonebook">Phonebook</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
-      </ul>
+    <div className={s.app}>
+      <div>
+        <ul>
+          <li className={s.link}>
+            <Link to="/" className={s.btn}>
+              Home
+            </Link>
+          </li>
+          <li className={s.link}>
+            <Link to="/phonebook" className={s.btn}>
+              Phonebook
+            </Link>
+          </li>
+        </ul>
+        <ul>
+          <li className={s.link}>
+            <Link to="/login" className={s.btn}>
+              Login
+            </Link>
+          </li>
+          <li className={s.link}>
+            <Link to="/register" className={s.btn}>
+              Register
+            </Link>
+          </li>
+        </ul>
+      </div>
       <Route exact path="/" component={HomePage} />
       <Route path="/login" component={LoginPage} />
       <Route path="/register" component={RegisterPage} />
