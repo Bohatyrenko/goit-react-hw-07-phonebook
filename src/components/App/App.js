@@ -1,6 +1,6 @@
 import React from 'react'; //при закоментированом варианте нужно сюда дописать { Component }
 // import { useState, useEffect } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import s from './app.module.css';
 
 //Components
@@ -11,6 +11,9 @@ import HomePage from '../../pages/HomePage';
 import LoginPage from '../../pages/LoginPage';
 import RegisterPage from '../../pages/RegisterPage';
 import PhonebookPage from '../../pages/PhonebookPage';
+// import Navigation from '../Navigation/Navigation';
+// import AuthNav from '../AuthNav/AuthNav';
+import AppBar from '../Nav/AppBar';
 
 // const initilState = {
 //   name: '',
@@ -18,6 +21,18 @@ import PhonebookPage from '../../pages/PhonebookPage';
 // };
 
 function App() {
+  return (
+    <div className={s.app}>
+      <AppBar />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
+        <Route path="/phonebook" component={PhonebookPage} />
+      </Switch>
+    </div>
+  );
+
   // const [state, setState] = useState(initilState);
 
   // useEffect(() => {
@@ -44,50 +59,6 @@ function App() {
   //     number: '',
   //   });
   // };
-
-  return (
-    <div className={s.app}>
-      <div>
-        <ul>
-          <li className={s.link}>
-            <Link to="/" className={s.btn}>
-              Home
-            </Link>
-          </li>
-          <li className={s.link}>
-            <Link to="/phonebook" className={s.btn}>
-              Phonebook
-            </Link>
-          </li>
-        </ul>
-        <ul>
-          <li className={s.link}>
-            <Link to="/login" className={s.btn}>
-              Login
-            </Link>
-          </li>
-          <li className={s.link}>
-            <Link to="/register" className={s.btn}>
-              Register
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <Route exact path="/" component={HomePage} />
-      <Route path="/login" component={LoginPage} />
-      <Route path="/register" component={RegisterPage} />
-      <Route path="/phonebook" component={PhonebookPage} />
-      {/* <h1>Phonebook</h1>
-      <ContactForm
-        onSetName={handleSetName}
-        reset={handleReset}
-        name={state.name}
-        number={state.number}
-      />
-      <ContactFilter />
-      <ContactList /> */}
-    </div>
-  );
 }
 
 export default App;

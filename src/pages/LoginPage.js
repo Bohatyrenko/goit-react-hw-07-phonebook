@@ -6,26 +6,18 @@ import RegisterPage from '../pages/RegisterPage';
 const LoginPage = () => (
   <div className={s.container}>
     <section id="content">
+      <h1>Login Form</h1>
       <form action="">
-        <h1>Login Form</h1>
-        <div>
-          <input type="text" placeholder="Username" required="" id="username" />
-        </div>
-        <div>
-          <input
-            type="password"
-            placeholder="Password"
-            required=""
-            id="password"
-          />
-        </div>
-        <div>
-          <input type="submit" value="Log in" />
-          <a href="https://support.google.com/accounts/answer/7682439?hl=ru">
-            Lost your password?
-          </a>
-          <Link to="/register">Register</Link>
-          <Route path="/register" component={RegisterPage} />
+        <label htmlFor="">
+          <p>Enter login</p>
+          <input name="login" type="text" placeholder="Login" />
+        </label>
+        <label htmlFor="">
+          <p>Enter password</p>
+          <input name="password" type="password" placeholder="Password" />
+        </label>
+        <div style={{ marginTop: '20px' }}>
+          <button>Login</button>
         </div>
       </form>
     </section>

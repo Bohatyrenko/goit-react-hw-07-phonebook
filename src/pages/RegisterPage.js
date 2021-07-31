@@ -5,29 +5,22 @@ const RegisterPage = () => {
   return (
     <div className={s.container}>
       <section id="content">
+        <h1>Register Form</h1>
         <form action="">
-          <h1>Register Form</h1>
-          <div>
-            <input
-              type="text"
-              placeholder="Username"
-              required=""
-              id="username"
-            />
-          </div>
-          <div>
-            <input type="text" placeholder="e-mail" required="" id="e-mail" />
-          </div>
-          <div>
-            <input
-              type="password"
-              placeholder="Password"
-              required=""
-              id="password"
-            />
-          </div>
-          <div>
-            <input type="submit" value="Register" />
+          <label>
+            <p>Enter name</p>
+            <input name="name" type="text" placeholder="Name" />
+          </label>
+          <label>
+            <p>Enter e-mail</p>
+            <input name="email" type="text" placeholder="email" />
+          </label>
+          <label>
+            <p>Enter password</p>
+            <input name="password" type="password" placeholder="password" />
+          </label>
+          <div style={{ marginTop: '20px' }}>
+            <button>Registration</button>
           </div>
         </form>
       </section>
