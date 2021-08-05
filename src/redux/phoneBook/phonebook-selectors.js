@@ -1,5 +1,5 @@
-const getPhonebookContacts = state => state.phonebookContacts;
-const getFilter = state => state.phonebookFilter;
+const getPhonebookContacts = state => state.contacts.phonebookContacts;
+const getFilter = state => state.contacts.phonebookFilter;
 
 const phonebookSelectors = {
   getPhonebookContacts,

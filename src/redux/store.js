@@ -9,6 +9,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
+import authReducer from './auth/auth-reducers';
 // import storage from 'redux-persist/lib/storage';
 
 // const persistConfig = {
@@ -18,7 +19,10 @@ import {
 // };
 
 export const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    contacts: rootReducer,
+    auth: authReducer,
+  },
   middleware: [
     ...getDefaultMiddleware({
       serializableCheck: {
